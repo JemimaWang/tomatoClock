@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view hidden="{{clockShow}}">
+  <view class="tomato">
+  <image src="../../images/tomato.png"/>
+  </view>
+  <!--时间滑动条-->
+  <view class="slider">
+    <slider min="1" max="60" show-value activeColor="#E7624F" value="{{time}}"
+    bindchange="slideChange">
+    </slider>
+  </view>
+  <view class="task_text">
+    <view class="task_title">选择一个任务</view>
+    <view class="task_content">在接下来的{{time}}分钟内，你将专注做这件事</view>
+  </view>
+  <view class="task_cate">
+    <view wx:for="{{cateArr}}" class="cate_item" wx:key="cate" bindtap="clickCate" data-index="{{index}}">
+      <view class="cate_icon"><image src="../../images/{{item.icon}}.png"/></view>
+      <view class="cate_text {{index == cateActive ? 'cate_text_active':''}}" >{{item.text}}</view>
+    </view>
+    
+  </view>
+  <button class="start" bindtap="start">开始计时</button>
+</view>
+<view hidden="{{!clockShow}}" class="clock" style="height:{{clockHeight}}rpx">
+  <view class="progress">
+    <canvas canvas-id="progress_bg" class="progress_bg"></canvas>
+    <canvas canvas-id="progress_active" class="progress_active"></canvas>
+    <view class="progress_text">{{timeStr}}</view>
+  </view>
+  <view>
+    <button class="returnBtn" bindtap="return" wx:if="{{returnShow}}">返回</button>
+    <button class="pauseBtn" bindtap="pause" wx:if="{{pauseShow}}">暂停</button>
+    <view wx:if="{{showCancelContinue}}">
+      <button class="continueBtn" bindtap="continue">继续</button>
+      <button class="cancelBtn" bindtap="cancel">终止</button>
+    </view>
+    
+  </view>
+  
+
+</view>
+
+

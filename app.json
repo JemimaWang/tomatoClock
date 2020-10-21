@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#E7624F",
+    "navigationBarTitleText": "番茄计时器",
+    "navigationBarTextStyle":"white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+
+  "tabBar":{
+    "color":"#707070",
+    "selectedColor":"#E7624F",
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "text":"任务",
+        "iconPath": "./images/clock.png",
+        "selectedIconPath": "./images/clock2.png"
+      },
+      {
+        "pagePath":"pages/logs/logs",
+        "text":"记录",
+        "iconPath": "./images/data.png",
+        "selectedIconPath": "./images/data2.png"
+        
+      }
+    ]
+  }
+}

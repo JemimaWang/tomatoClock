@@ -1,0 +1,117 @@
+/**index.wxss**/
+.tomato{
+  width: 650rpx;
+  margin: 0 auto;
+  text-align: center;
+}
+.tomato image{
+  width: 300rpx;
+  height: 280rpx;
+}
+.slider{
+  width: 650rpx;
+  margin: 0 auto;
+}
+.task_text{
+  height: 125rpx;
+  margin: 30rpx auto;
+  text-align: center;
+}
+.task_text .task_title{
+  font-size: 35rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+}
+.task_text .task_content{
+  font-size: 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: darkgray;
+}
+.task_cate{
+  width: 660rpx;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.task_cate .cate_item{
+  width: 220rpx;
+  height: 130rpx;
+  text-align: center;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.task_cate .cate_item .cate_icon{
+  height: 70rpx;
+}
+.task_cate .cate_item .cate_icon image{
+  height: 50rpx;
+  width: 50rpx;
+}
+.task_cate .cate_item .cate_text{
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.task_cate .cate_item .cate_text_active {
+  color: #E7624F;
+}
+.start{
+  width: 300rpx !important;
+  height: 100rpx !important;
+  background-color: white;
+  border: 2rpx solid #E7624F;
+  border-radius: 25rpx;
+  font-size:45rpx;
+  color: #E7624F;
+  font-weight: 1;
+  line-height: 65rpx;
+  text-align: center;
+  margin-top: 40rpx !important;
+}
+.start:active{
+  background-color: #E7624F;
+  color: white;
+}
+
+.clock{
+  background: #E7624F;
+  overflow: hidden;
+}
+.progress{
+  width: 400rpx;
+  height: 400rpx;
+  margin: 120rpx auto;
+  position: relative;
+  
+}
+.progress .progress_bg, .progress .progress_active{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 400rpx;
+  height: 400rpx;
+}
+
+.progress .progress_text{
+  position: absolute;
+  left: 120rpx;
+  top: 170rpx;
+  width: 160rpx;
+  height: 160rpx;
+  line-height: 60rpx;
+  font-size: 35rpx;
+  color: white;
+  text-align: center;
+}
+
+.returnBtn,.pauseBtn,.continueBtn,.cancelBtn{
+  width: 300rpx !important;
+  border: 2rpx solid white;
+  border-radius: 30rpx;
+  background-color: #E7624F;
+  font-weight: normal;
+  color: white;
+  margin-top: 25rpx;
+}
